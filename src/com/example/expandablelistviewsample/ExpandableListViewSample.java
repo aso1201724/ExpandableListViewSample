@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
@@ -15,6 +16,9 @@ import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.SimpleExpandableListAdapter;
 
 public class ExpandableListViewSample extends Activity {
+
+	Intent intent = null;
+
 	  private static final String KEY1 = "GROUP";
 	  private static final String KEY2 = "CHILD";
 
@@ -96,6 +100,23 @@ public class ExpandableListViewSample extends Activity {
 	      public boolean onChildClick(ExpandableListView parent, View v,
 	          int groupPosition, int childPosition, long id) {
 	        // クリックされた時の処理
+
+	    	  String s1=String.valueOf(id);
+	    	  int a=Integer.parseInt(s1);
+
+
+	    	  switch(a){
+	    		case 0:
+
+	    			intent = new Intent(ExpandableListViewSample.this, TestActivity.class);
+
+	    			//intent.putExtra("hitokoto", strHitokoto);
+	    			//次画面のアクティビティ起動
+	    			startActivity(intent);
+
+	    			break;
+	    	}
+
 	        return false;
 	      }
 	    });
