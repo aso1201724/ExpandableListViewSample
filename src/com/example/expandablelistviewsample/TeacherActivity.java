@@ -15,7 +15,7 @@ import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.ExpandableListView.OnGroupClickListener;
 import android.widget.SimpleExpandableListAdapter;
 
-public class ExpandableListViewSample extends Activity {
+public class TeacherActivity extends Activity {
 
 	Intent intent = null;
 
@@ -33,7 +33,7 @@ public class ExpandableListViewSample extends Activity {
 	  @Override
 	  public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    setContentView(R.layout.expandablelistview_sample);
+	    setContentView(R.layout.teacher);
 
 	    // 設定する文字列のリスト
 	    List<Map<String, String>> groupData =
@@ -158,7 +158,7 @@ public class ExpandableListViewSample extends Activity {
 	    	  switch(a){
 	    		case 0:
 
-	    			intent = new Intent(ExpandableListViewSample.this, MsgActivity.class);
+	    			intent = new Intent(TeacherActivity.this, MsgActivity.class);
 
 	    			//intent.putExtra("v", str);
 
@@ -166,7 +166,7 @@ public class ExpandableListViewSample extends Activity {
 
 	    		case 1:
 
-	    			intent = new Intent(ExpandableListViewSample.this, Test1Activity.class);
+	    			intent = new Intent(TeacherActivity.this, Test1Activity.class);
 
 	    			//intent.putExtra("v", str);
 
@@ -174,7 +174,7 @@ public class ExpandableListViewSample extends Activity {
 
 	    		case 2:
 
-	    			intent = new Intent(ExpandableListViewSample.this, Test2Activity.class);
+	    			intent = new Intent(TeacherActivity.this, Test2Activity.class);
 
 	    			//intent.putExtra("v", str);
 
